@@ -13,9 +13,9 @@
         line-height: 1.6;
         background-image: url('IMG/SVG/base\ sfondo.svg');
         
-        background-size: cover;         /* copre sempre tutto */
-        background-position: center;    /* rimane centrata */
-        background-repeat: no-repeat;   /* non si ripete */
+        background-size: cover;         
+        background-position: center;    
+        background-repeat: no-repeat;   
          min-height: 100vh;
          width: 100%;
     }
@@ -77,17 +77,19 @@
     }
 
     .logo img {
-    height: 55px;             /* altezza fissa */
-    width: auto;              /* larghezza proporzionale */
-    object-fit: contain;      /* non si deforma */
+    height: 55px;             
+    width: auto;             
+    object-fit: contain;      
     display: block;
     }
 
-    /* Tablet barra logo e nav*/ @media (max-width: 900px) {
+    /* Tablet barra logo e nav*/
+     @media (max-width: 900px) {
     .logo img { height: 44px; }
     }
 
-    /* Mobile barra logo e nav*/@media (max-width: 640px) {
+    /* Mobile barra logo e nav*/
+    @media (max-width: 640px) {
     .logo img { height: 36px; }
     nav { padding: 0 20px; }
     .nav-links { display: none; }
@@ -314,7 +316,7 @@ h2{
     font-size: clamp(2.5rem, 5vw, 3rem);
     color: #ffffff;                     
     text-transform: uppercase;
-    letter-spacing: -2px;
+    letter-spacing: 0px;
 
 }
 
@@ -536,6 +538,7 @@ h3 { margin:300x auto;
 
     .hardskill {
         flex: 3; 
+        display:inline-block;
         background-color:#0b152c;
         box-shadow: 0 0 10px 0 rgba(7, 114, 144, 0.45) inset;
         border-radius: 12px;
@@ -571,6 +574,39 @@ h3 { margin:300x auto;
     color: white;
     font-size: 0.6rem;}
 
+ /* Tablet */
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+  }
+
+  .softskill,
+  .hardskill {
+    width: 100%;
+    flex: unset;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .skills-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .softskill,
+  .hardskill {
+    width: 100%;
+    flex: unset;
+    padding: 1.5rem;
+  }
+
+  .strumenti {
+    width: 100%;  /* le card hardskill a tutta larghezza */
+    display: block;
+    margin: 8px 0;
+  }
+}
 
 /*    STORIA -------------------------*/
 
@@ -610,7 +646,7 @@ h3 { margin:300x auto;
   border-radius: 12px;
 }
 .gallery-item {
-   position: relative;
+  position: relative;
   flex: 1;
   overflow: hidden;
   margin-left: 0; 
