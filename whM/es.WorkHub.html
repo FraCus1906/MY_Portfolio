@@ -1,0 +1,307 @@
+Index · HTML
+Copia
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WorkHub Milano – Il tuo ufficio, quando vuoi">
+  <title>WorkHub Milano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="grid.css">
+</head>
+<body>
+ 
+<!-- ===== MENU ===== -->
+<header>
+  <nav class="menu">
+    <a href="#home">
+      <img src="img_wHm/logo.svg" alt="WorkHub Milano logo" class="logo">
+    </a>
+    <ul>
+      <li><a href="#chisiamo">Chi siamo</a></li>
+      <li><a href="#servizi">Servizi</a></li>
+      <li><a href="#prezzi">Prezzi</a></li>
+      <li><a href="#prenota">Prenota</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+    </ul>
+  </nav>
+
+  <!--hamburger-->
+  <nav class="menu">
+  <a href="#home">
+    <img src="img_wHm/logo.svg" alt="WorkHub Milano logo" class="logo">
+  </a>
+  <ul id="nav-menu">
+    <li><a href="#chisiamo" onclick="chiudiMenu()">Chi siamo</a></li>
+    <li><a href="#servizi" onclick="chiudiMenu()">Servizi</a></li>
+    <li><a href="#prezzi" onclick="chiudiMenu()">Prezzi</a></li>
+    <li><a href="#prenota" onclick="chiudiMenu()">Prenota</a></li>
+    <li><a href="#contatti" onclick="chiudiMenu()">Contatti</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+</header>
+ 
+<!-- ===== HERO ===== -->
+<section id="home">
+  <img class="hero-bg" src="img_wHm/salaopenspace.jpg" alt="Sala open space WorkHub Milano">
+  <div class="hero-overlay"></div>
+  <div class="hero-testo">
+    <h1>WorkHub Milano</h1>
+    <h3>Il tuo ufficio, quando vuoi</h3>
+  </div>
+</section>
+ 
+<!-- ===== CHI SIAMO ===== -->
+<section id="chisiamo">
+  <div class="chisiamo-grid">
+    <img src="img_wHm/salariunionizoom.jpg" alt="Sala riunioni WorkHub Milano">
+    <div class="chisiamo-testo">
+      <h2>Chi siamo</h2>
+      <p>WorkHub Milano nasce dall'idea di creare uno spazio di lavoro flessibile nel cuore della città. Offriamo postazioni moderne, sale riunioni attrezzate e un ambiente stimolante per freelancer, startup e professionisti.</p>
+      <p>Siamo aperti dal lunedì al sabato, dalle 8:00 alle 22:00.</p>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===== FOTO SALA RIUNIONI ===== -->
+<div class="sezione-foto">
+  <img src="img_wHm/salariunioni.jpg" alt="Sala riunioni">
+  <div class="overlay"></div>
+</div>
+ 
+<!-- ===== SERVIZI ===== -->
+<section id="servizi">
+  <h2>Servizi inclusi</h2>
+  <ul class="griglia-servizi">
+    <li>Wifi ultra veloce</li>
+    <li>Stampante e scanner</li>
+    <li>Reception H12</li>
+    <li>Indirizzo fiscale (su richiesta)</li>
+    <li>Caffè e snack illimitati</li>
+    <li>Armadietti personali</li>
+    <li>Sala relax</li>
+    <li>Parcheggio bici</li>
+  </ul>
+</section>
+ 
+<!-- ===== PREZZI ===== -->
+<section id="prezzi">
+  <h2>Piani prezzi</h2>
+ 
+  <div class="tabella-wrapper">
+    <table class="tabella-prezzi">
+      <thead>
+        <tr>
+          <th>Piano</th>
+          <th>Include</th>
+          <th>Prezzo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">Daily Pass</td>
+          <td align="center">1 giorno di postazione flex</td>
+          <td align="center">€25 / giorno</td>
+        </tr>
+        <tr>
+          <td align="center">Weekly</td>
+          <td align="center">5 giorni postazione flex</td>
+          <td align="center">€99 / settimana</td>
+        </tr>
+        <tr>
+          <td align="center">Monthly Flex</td>
+          <td align="center">Accesso illimitato, postazione flex</td>
+          <td align="center">€299 / mese</td>
+        </tr>
+        <tr>
+          <td align="center">Monthly Dedicata</td>
+          <td align="center">Accesso illimitato, scrivania fissa tua</td>
+          <td align="center">€449 / mese</td>
+        </tr>
+        <tr>
+          <td align="center">Sala Riunioni</td>
+          <td align="center">6 posti, schermo, whiteboard</td>
+          <td align="center">€30 / ora</td>
+        </tr>
+      </tbody>
+    </table>
+    <br><br><br>
+    <table class="tabella-prezzi">
+    <thead>
+        
+          <th>TOUR GRATUITO</th>
+        
+    </thead></table>
+
+
+
+  </div>
+ 
+  <h2 class="orari-titolo">Orari</h2>
+  <div class="tabella-wrapper">
+    <table class="tabella-orari">
+      <thead>
+        <tr>
+          <th>Lunedì–Venerdì</th>
+          <th>Sabato</th>
+          <th>Domenica</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">8:00 – 22:00</td>
+          <td align="center">9:00 – 18:00</td>
+          <td align="center">Chiuso</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+ 
+<!-- ===== FOTO SALA RELAX ===== -->
+<div class="sezione-foto">
+  <img src="img_wHm/salarelax.jpg" alt="Sala relax">
+  <div class="overlay"></div>
+</div>
+ 
+<!-- ===== FORM PRENOTAZIONE ===== -->
+<section id="prenota">
+  <h2>Prenota il tuo tour</h2>
+  <h3>o richiedi info</h3>
+ 
+  <form action="conferma.html" method="post" class="form-prenotazione">
+ 
+    <div class="form-row">
+      <div class="form-group">
+        <label for="nome_cognome">Nome e cognome</label>
+        <input type="text" name="nome_cognome" id="nome_cognome" placeholder="Mario Rossi" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="nome@gmail.com" required>
+      </div>
+    </div>
+ 
+    <div class="form-row">
+      <div class="form-group">
+        <label for="telefono">Telefono</label>
+        <input type="tel" name="telefono" id="telefono" placeholder="+39 02 1234567" required>
+      </div>
+      <div class="form-group">
+        <label for="interesse">Tipo di interesse</label>
+        <select id="interesse" name="interesse" required>
+          <option value="">Seleziona...</option>
+          <option value="freelancer">Freelancer</option>
+          <option value="startup">Startup</option>
+          <option value="azienda">Azienda</option>
+        </select>
+      </div>
+    </div>
+ 
+    <div class="form-group">
+      <label for="messaggio">Messaggio (opzionale)</label>
+      <textarea name="messaggio" id="messaggio" placeholder="Qual è la tua richiesta?"></textarea>
+    </div>
+ 
+    <div class="checkbox-row">
+      <input type="checkbox" name="info" id="info" checked>
+      <label for="info" style="font-weight:400;">Sì, voglio ricevere aggiornamenti e offerte da WorkHub Milano</label>
+    </div>
+ 
+    <button type="submit" class="btn-submit">Prenota il tour →</button>
+  </form>
+</section>
+ 
+<!-- ===== CONTATTI ===== -->
+<section id="contatti">
+  <h2>Contatti</h2>
+ 
+  <div class="contatti-grid">
+    <div class="contatto-item">
+        <img src="img_wHm/100h/posizione.png.png" style="width: 10%;">
+      <h4>Indirizzo</h4>
+      <p>Via Torino 45, Milano</p>
+    </div>
+    <div class="contatto-item">
+        <img src="img_wHm/100h/telefono..png.png" style="width: 12%;">
+      <h4>Telefono</h4>
+      <p>02 1234567</p>
+    </div>
+    <div class="contatto-item">
+        <img src="img_wHm/100h/email.png.png" style="width: 12%;">
+
+      <h4>Email</h4>
+      <p>info@workhubmilano.it</p>
+    </div>
+  </div>
+ 
+  <h2 style="margin-top:60px;">Social</h2>
+ 
+  <div class="social-grid">
+    <div class="social-item">
+        <img src="img_wHm/100h/facebook.png.png" style="width: 10%;">
+      <h4>Facebook</h4>
+      <p>WorkHub_Milano</p>
+    </div>
+    <div class="social-item">
+        <img src="img_wHm/100h/instagramme.png.png" style="width: 20%;">
+      <h4>Instagram</h4>
+      <p>WorkHub_Milano</p>
+    </div>
+    <div class="social-item">
+        <img src="img_wHm/100h/whatsApp.png.png" style="width: 20%;">
+
+      <h4>WhatsApp</h4>
+      <p>+39 987 1234567</p>
+    </div>
+    <div class="social-item">
+        <img src="img_wHm/100h/x.png.png" style="width: 18%;">
+
+      <h4>X</h4>
+      <p>WorkHub_Milano_Community</p>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-privacy">
+      <h4>Legale</h4>
+      <ul>
+        <li><a href="/privacy-policy" target="_blank">Privacy Policy</a></li>
+        <li><a href="/cookie-policy" target="_blank">Cookie Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-map">
+      <h4>Dove siamo</h4>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.4143245561327!2d9.182952375759596!3d45.461457033622395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6ab09aafd41%3A0x3734d875ef1eb334!2sVia%20Torino%2C%2045%2C%2020123%20Milano%20MI!5e0!3m2!1sit!2sit!4v1770641375722!5m2!1sit!2sit"
+        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Mappa WorkHub Milano">
+      </iframe>
+    </div>
+  </div>
+  <div class="footer-info">
+    <p>© 2025 WorkHub Milano | P.IVA 12345678901</p>
+  </div>
+</footer>
+ <script>
+  function toggleMenu() {
+    document.getElementById('nav-menu').classList.toggle('aperta');
+    document.getElementById('hamburger').classList.toggle('aperto');
+  }
+  function chiudiMenu() {
+    document.getElementById('nav-menu').classList.remove('aperta');
+    document.getElementById('hamburger').classList.remove('aperto');
+  }
+</script>
+</body>
+</html>

@@ -28,7 +28,7 @@
         <!-- poi il font google font per inserire icone -->
        <!-- Nel head -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!--implementazione uso di tailwindcss       
+        <!--implementazione uso di tailwindcss        
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>-->
 
 
@@ -51,7 +51,7 @@
                 <li><a href="#storia">story</a></li>
                 <li><a href="#esperienze">gallery</a></li>
                 <li><a href="#contatti">contact</a></li>
-                <li><a href="#" class="nav-cta">dowload CV</a></li>
+                <li><a href="ENG- CV Junior Developer.pdf" class="nav-cta">dowload CV</a></li>
             </ul>
 
             <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -243,7 +243,7 @@
         <section id="esperienze">
         
             <div class="storicolavoro">
-                <h2 align="center">esperieze lavorative</h2>
+                <h2 align="center">work experiences</h2>
             </div>
             <div class="storicdeveloper">
                 <h2 align="center">developer</h2>
@@ -260,22 +260,39 @@
         </section>
 
         <!--galleria foto-->
-      <section id="galleriafoto">
+        <section id="galleriafoto">
         <div class="gallery">
+
             <div class="gallery-item">
-                <img src="IMG/galleria/1.jpg" alt="Foto 1">
+            <a href="#top" target="_blank">
+                <img src="IMG/galleria/1.jpg" alt="Progetto 1">
+                <div class="gallery-label"></div>
+            </a>
             </div>
+
             <div class="gallery-item">
-                <img src="IMG/galleria/2.jpg" alt="Foto 2">
+             <a href="whM/es.WorkHub.html" target="_blank">
+                <img src="IMG/galleria/2.jpg" alt="WorkHub Milano">
+                <div class="gallery-label">.</div>
+            </a>
             </div>
+
             <div class="gallery-item">
-                <img src="IMG/galleria/3.jpg" alt="Foto 3">
+            <a href="#top" target="_blank">
+                <img src="IMG/galleria/3.jpg" alt="Progetto 3">
+                <div class="gallery-label"></div>
+            </a>
             </div>
+
             <div class="gallery-item">
-                <img src="IMG/galleria/4.jpg" alt="Foto 4">
+            <a href="#top" target="_blank">
+                <img src="IMG/galleria/4.jpg" alt="Progetto 4">
+                <div class="gallery-label"></div>
+            </a>
             </div>
-            </div>
-      </section>
+
+        </div>
+        </section>
 
         <!--CONTATTI -->
     <section class="nuovosfondo">
@@ -290,29 +307,35 @@
         <h3>contact</h3>
             
             <section id="info">
-                    <p>
-                        <span class="material-symbols-outlined">person</span>
-                        <b>nome:</b> Francesca Cusenza</p>
-                    <p><span class="material-symbols-outlined">star_rate</span>
-                        <b>born:</b> 19 Giu 1994</p>
-                    <p><span class="material-symbols-outlined">star_rate</span>
-                        <b>citizenship:</b> italiana</p>
+                     <div class="info-grid">
+
+                    <div class="info-col">
+                    <p><span class="material-symbols-outlined">person</span>
+                        <b>name:</b> Francesca Cusenza</p>
+                    <p><span class="material-symbols-outlined">cake</span>
+                        <b>born:</b> 19 June 1994</p>
+                    <p><span class="material-symbols-outlined">flag</span>
+                        <b>citizenship:</b> Italian</p>
                     <p><span class="material-symbols-outlined">location_on</span>
-                        <b>address:</b> SICILIA, ITALY</p>
+                        <b>address:</b> Sicily, Italy</p>
                     <p><span class="material-symbols-outlined">phone_enabled</span>
-                        <b>phon:</b> 327 2288294</p>
+                        <b>phone:</b> +39 327 2288294</p>
+                    </div>
+
+                    <div class="info-col">
                     <p><span class="material-symbols-outlined">alternate_email</span>
-                        <b>email_01:</b><a href="c.francesca94@hotmail.it">c.francesca94@hotmail.it</a></p>
+                        <b>email:</b> <a href="mailto:c.francesca94@hotmail.it">c.francesca94@hotmail.it</a></p>
                     <p><span class="material-symbols-outlined">alternate_email</span>
-                        <b>pec:</b><a href="c.francesca94@hotmail.it">c.francesca94@pec.it</a></p>
-                    <p><span class="material-symbols-outlined">new_label</span>
-                        <b>linkenIn</b> FraCus94</p>
-                    <p><span class="material-symbols-outlined">new_label</span>
-                        <b>github</b> FraCus94</p>
-                    <p><span class="material-symbols-outlined">new_label</span>
-                        <b>istagram</b> Francesca Cusenza</p>
-                    <p><span class="material-symbols-outlined">new_label</span>
-                        <b>facebook</b> Francesca Cusenza</p>
+                        <b>pec:</b> <a href="mailto:c.francesca94@pec.it">c.francesca94@pec.it</a></p>
+                    <p><span class="material-symbols-outlined">work</span>
+                        <b>LinkedIn:</b> Francesca Cusenza</p>
+                    <p><span class="material-symbols-outlined">code</span>
+                        <b>GitHub:</b> FraCus94</p>
+                    <p><span class="material-symbols-outlined">photo_camera</span>
+                        <b>Instagram & Facebook:</b> Francesca Cusenza</p>
+                    </div>
+
+                </div>
 
             </section>
 
@@ -362,6 +385,19 @@
             navbar.classList.toggle('scrolled', window.scrollY > 30);
         });
 
+          const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => {
+            if (window.scrollY >= s.offsetTop - 100) current = s.id;
+            });
+            navLinks.forEach(a => {
+            a.classList.remove('active');
+            if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+            });
+        });
     </script>   
 
 </body>

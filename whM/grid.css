@@ -1,0 +1,527 @@
+/* ===================== RESET & BASE ===================== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+ 
+    :root {
+      --verde:    #146404;
+      --arancio:  #ef8a17;
+      --scuro:    #121212;
+      --grigio:   #333;
+      --chiaro:   #f5f5f5;
+      --bianco:   #ffffff;
+    }
+ 
+    html { scroll-behavior: smooth; }
+ 
+    body {
+      font-family: "Caudex", serif;
+      color: var(--grigio);
+      line-height: 1.7;
+      background: var(--bianco);
+    }
+ 
+    h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+    section { scroll-margin-top: 60px; }
+ 
+    /* ===================== MENU ===================== */
+    .menu {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 5%;
+      background: rgba(255,255,255,0.97);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+ 
+    .logo { height: 44px; width: auto; }
+ 
+    .menu ul {
+      list-style: none;
+      display: flex;
+      gap: 4px;
+    }
+ 
+    .menu ul li a {
+      display: block;
+      color: var(--verde);
+      padding: 8px 14px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+    }
+ 
+    .menu ul li a:hover {
+      background: var(--arancio);
+      color: var(--bianco);
+    }
+    /* ====================HAMBURGER======================*/
+    /* hamburger button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 6px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--verde);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* stato aperto */
+.hamburger.aperto span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.aperto span:nth-child(2) { opacity: 0; }
+.hamburger.aperto span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 600px) {
+  .hamburger { display: flex; }
+
+  .menu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(255,255,255,0.98);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    gap: 0;
+  }
+
+  .menu ul.aperta { display: flex; }
+
+  .menu ul li a {
+    padding: 14px 5%;
+    border-radius: 0;
+  }
+}
+ 
+    /* ===================== HERO ===================== */
+    #home {
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+ 
+    #home img.hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+ 
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+    }
+ 
+    .hero-testo {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: var(--bianco);
+      padding: 0 20px;
+    }
+ 
+    .hero-testo h1 {
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      letter-spacing: 2px;
+    }
+ 
+    .hero-testo h3 {
+      font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+      font-weight: 400;
+      font-style: italic;
+      margin-top: 12px;
+      opacity: 0.9;
+    }
+ 
+    /* ===================== CHI SIAMO ===================== */
+    #chisiamo {
+      padding: 100px 8%;
+    }
+ 
+    .chisiamo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+ 
+    .chisiamo-grid img {
+      width: 70%;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
+ 
+    .chisiamo-testo h2 { color: var(--scuro); }
+ 
+    .chisiamo-testo p {
+      font-size: 1.05rem;
+      color: var(--grigio);
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+ 
+    /* ===================== SEZIONE FOTO FULL ===================== */
+    .sezione-foto {
+      height: 70vh;
+      position: relative;
+      overflow: hidden;
+    }
+ 
+    .sezione-foto img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+ 
+    .sezione-foto .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+    }
+ 
+    /* ===================== SERVIZI ===================== */
+    #servizi {
+      padding: 100px 8%;
+      background: var(--chiaro);
+      text-align: center;
+    }
+ 
+    #servizi h2 { color: var(--scuro); }
+ 
+    .griglia-servizi {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+    }
+ 
+    .griglia-servizi li {
+      list-style: none;
+      font-size: 1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+ 
+    .griglia-servizi li::before {
+      content: "•";
+      color: var(--arancio);
+      font-size: 1.4rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+ 
+    /* ===================== PREZZI ===================== */
+    #prezzi {
+      padding: 100px 8%;
+      text-align: center;
+    }
+ 
+    #prezzi h2 { color: var(--scuro); }
+ 
+    .tabella-wrapper {
+      overflow-x: auto;
+      margin: 0 auto 60px;
+      max-width: 800px;
+    }
+ 
+    .tabella-prezzi {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+ 
+    .tabella-prezzi th {
+      background: var(--arancio);
+      color: var(--bianco);
+      padding: 14px 20px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+ 
+    .tabella-prezzi td {
+      padding: 14px 20px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+ 
+    .tabella-prezzi tr:nth-child(even) td { background: var(--chiaro); }
+ 
+    .tabella-prezzi td:last-child {
+      font-weight: 700;
+      color: var(--verde);
+    }
+ 
+    /* Orari */
+    #prezzi h2.orari-titolo { margin-top: 60px; }
+ 
+ .tabella-orari {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+ 
+    .tabella-orari th {
+      background: var(--arancio);
+      color: var(--bianco);
+      padding: 14px 20px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+ 
+    .tabella-orari td {
+      padding: 14px 20px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+ 
+    .tabella-orari tr:nth-child(even) td { background: var(--chiaro); }
+ 
+    .tabella-orari td:last-child {
+      font-weight: 700;
+      color: var(--scuro);
+    }
+ 
+    /* ===================== FORM ===================== */
+    #prenota {
+      padding: 100px 8%;
+      background: var(--chiaro);
+    }
+ 
+    #prenota h2, #prenota h3 {
+      text-align: center;
+      color: var(--scuro);
+    }
+ 
+    #prenota h3 {
+      font-size: 1rem;
+      font-weight: 400;
+      font-style: italic;
+      margin-top: 4px;
+      margin-bottom: 40px;
+    }
+ 
+    .form-prenotazione {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+ 
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+ 
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+ 
+    label {
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+ 
+    input, select, textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: "Caudex", serif;
+      transition: border-color 0.2s;
+    }
+ 
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--arancio);
+    }
+ 
+    textarea { min-height: 110px; resize: vertical; }
+ 
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+    }
+ 
+    .checkbox-row input[type="checkbox"] {
+      width: auto;
+      accent-color: var(--arancio);
+    }
+ 
+    .btn-submit {
+      align-self: flex-end;
+      padding: 12px 28px;
+      background: var(--scuro);
+      color: var(--bianco);
+      border: none;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.25s;
+    }
+ 
+    .btn-submit:hover { background: var(--arancio); }
+ 
+    /* ===================== CONTATTI ===================== */
+    #contatti {
+      padding: 100px 8%;
+      text-align: center;
+    }
+ 
+    #contatti h2 { color: var(--scuro); }
+ 
+    .contatti-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
+    }
+ 
+    .contatto-item h4 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 6px;
+    }
+ 
+    .contatto-item p {
+      font-size: 0.95rem;
+      font-style: italic;
+    }
+ 
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 700px;
+      margin: 40px auto;
+      text-align: center;
+    }
+ 
+    .social-item h4 {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 6px;
+    }
+ 
+    .social-item p {
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+ 
+    /* ===================== FOOTER ===================== */
+    footer {
+      background: var(--scuro);
+      color: #bbb;
+      padding: 50px 8% 20px;
+    }
+ 
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+ 
+    footer h4 {
+      color: var(--bianco);
+      font-size: 0.85rem;
+      font-family: "Montserrat", sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--arancio);
+      display: inline-block;
+    }
+ 
+    .footer-privacy ul {
+      list-style: none;
+      padding: 0;
+    }
+ 
+    .footer-privacy ul li { margin-bottom: 6px; }
+ 
+    .footer-privacy a {
+      color: #bbb;
+      text-decoration: none;
+      font-style: italic;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+ 
+    .footer-privacy a:hover { color: var(--arancio); }
+ 
+    .footer-map iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      border-radius: 10px;
+      display: block;
+    }
+ 
+    .footer-info {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid #333;
+      color: #555;
+      font-size: 0.82rem;
+      margin-top: 30px;
+    }
+ 
+    /* ===================== RESPONSIVE ===================== */
+    @media (max-width: 900px) {
+      .chisiamo-grid { grid-template-columns: 1fr; }
+      .griglia-servizi { grid-template-columns: repeat(2, 1fr); }
+      .form-row { grid-template-columns: 1fr; }
+      .social-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr; }
+    }
+ 
+    @media (max-width: 600px) {
+      .menu ul { display: none; } /* menu mobile da implementare se serve */
+      .griglia-servizi { grid-template-columns: 1fr; }
+      .contatti-grid { grid-template-columns: 1fr; }
+      .tabella-prezzi th, .tabella-prezzi td { padding: 10px 12px; font-size: 0.85rem; }
+    }
