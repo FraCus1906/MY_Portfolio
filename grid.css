@@ -9,9 +9,12 @@
     body {
        
         font-family: 'Lato', sans-serif;
-        color:#000000;
+        color:#000000; 
         line-height: 1.6;
-        background-image: url('IMG/SVG/base\ sfondo.svg');
+        /*        color:#000000; 
+
+        background-image: url('IMG/SVG/base\ sfondo.svg');*/
+        background-color: #0b152c;
         
         background-size: cover;         
         background-position: center;    
@@ -219,7 +222,7 @@
       justify-content: space-between;
     }
     .mobile-menu a:hover, .mobile-menu a.active { color: var(--text); }
-    .mobile-menu a::after { content: '→'; font-size: 0.85rem; opacity: 0.4; }
+    .mobile-menu a::after { font-size: 0.85rem; opacity: 0.4; }
     .mobile-menu .m-cta {
       margin-top: 16px;
       display: block;
@@ -313,6 +316,8 @@ section {
     /*per titoli e testo*/
     display: flex;
     flex-direction: column;
+    align-items: center;      /* aggiunto */
+    justify-content: center;  /* aggiunto — per centrare sull'asse Y */
 }
 
 h1 {
@@ -351,7 +356,8 @@ h3 { margin:300x auto;
     .hero-titolo{
     width: 100%;
     height: 100vh;
-    background-image: url('IMG/SVG/likeAsset\ 5@72x.svg');
+    /*background-image: url('IMG/SVG/likeAsset\ 5@72x.svg');*/
+    background-image: url('IMG/SVG/SVG/sfondogiallobianco.svg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -445,11 +451,9 @@ h3 { margin:300x auto;
         flex: 1;
         position: relative;
         /*min-width: 200px;
-        max-width: 60%;       /* ← non supera il 60% della sezione */
+        max-width: 60%;       /*mi serve per non supera il 60% della sezione */
         padding: 30px;
         }
-
-
 
        .testo-wrapper p {
         position: relative;
@@ -487,8 +491,39 @@ h3 { margin:300x auto;
     div.titolo { flex-direction: column; gap: 4px; }
     }
 
+/* spazio libero - scarabocchio + animazione
+--------------------------------------*/
+.scarabocchio {
+    animation: scarabocchioIn 1.2s ease forwards;
+}
 
+@keyframes scarabocchioIn {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.sfondogeo {
+    animation: sfondogeoIn 1.2s ease forwards;
+    display: block;
+    margin-bottom: -20px; 
+    
+}
 
+@keyframes sfondogeoIn {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 /*skill
 -------------------------------------*/
 
@@ -615,7 +650,7 @@ h3 { margin:300x auto;
   }
 
   .strumenti {
-    width: 100%;  /* le card hardskill a tutta larghezza */
+    width: 100%;  /* permette alle card hardskill di stare a tutta larghezza */
     display: block;
     margin: 8px 0;
   }
@@ -642,8 +677,8 @@ h3 { margin:300x auto;
 -------------------------------------*/
 #galleriafoto {
  width: 100%;
-    max-width: 100%;   /* ← era 1200px, cambia in 100% */
-    margin: 0;         /* ← togli l'auto */
+    max-width: 100%;   /* prima era 1200px, l'ho cambiato in 100% */
+    margin: 0;         /* mi permette di togliere l'auto */
     padding: 30px;
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
@@ -726,10 +761,10 @@ h3 { margin:300x auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed; /* ← questo fa restare lo sfondo fisso */
+  background-attachment: fixed; /* mi permette di far restare lo sfondo fisso */
   margin: 0;
   padding: 0;
-  position: sticky;  /* ← lo sfondo resta visibile mentre scorri */
+  position: sticky;  /* lo sfondo resta visibile mentre si scorre */
   top: 0;
 }
 
@@ -739,11 +774,10 @@ h3 { margin:300x auto;
   width: 100%;
   height: 100vh;
   background-image: url('IMG/SVG/464A1910.png');
-  background-size: cover;        /* ← cambia contain in cover */
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;  /* ← centra su tutti i lati */
-  margin: 0;                           /* ← rimuovi il margin -5% */
+  background-position: center center;  /* mi permette di centra su tutti i lati */
+  margin: 0;                           /* permette di rimuovere il margin -5% */
   padding: 0;
   display: flex;
   align-items: center;
@@ -758,7 +792,7 @@ h3 { margin:300x auto;
   'GRAD' 0,
   'opsz' 24;
   vertical-align: middle;
-  font-size: 20px; /* regola in base alla dimensione del testo */
+  font-size: 20px; /* permette di regolarsi in base alla dimensione del testo */
   color:#0f0e0e;
 }
 
@@ -789,12 +823,12 @@ h3 { margin:300x auto;
 }
 
 .info-col a:hover {
-  color: var(--accent);  /* usa il colore che hai già nella tua variabile */
+  color: var(--accent);  /* si usa il colore che si ha già nella variabile */
 }
 
 @media (max-width: 640px) {
   .info-grid {
-    grid-template-columns: 1fr; /* su mobile torna a colonna singola */
+    grid-template-columns: 1fr; /* su mobile mi permette di torna a colonna singola */
   }
 }
 
