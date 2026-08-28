@@ -1,0 +1,308 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgb(1, 17, 27);
+    font-family: 'Lato', sans-serif;
+    color: #000000;
+}
+
+main {
+    flex: 1 0 auto;           /* spinge il footer in fondo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* centra orizzontalmente la galleria */
+    justify-content: center;  /* centra verticalmente se c'è spazio extra */
+    padding-top: var(--nav-h, 68px); /* evita che la nav fissa copra il contenuto */
+    text-align: center;
+}
+
+
+/*      NAVBAR - SCORRIMENTO + HAMBURGER MOBILE
+-------------------------------------------------------*/
+
+:root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --border: rgba(255,255,255,0.08);
+  --text: #92d4d4;
+  --muted: #020202;
+  --accent: #92d4d4;
+  --accent-strong: #40bfb9;
+  --nav-h: 68px;
+}
+
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: #ffffff;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  transition: background 0.3s;
+}
+
+nav.scrolled {
+    background-color: #ffffff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+.nav-inner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO nav*/
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid currentColor;
+    border-radius: 20px;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: inherit;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.lang-toggle:hover {
+    background: rgba(0, 0, 0, 0.08);
+    transform: scale(1.05);
+}
+
+.lang-toggle .flag {
+    font-size: 16px;
+}
+
+@media (max-width: 900px) {
+    .logo img { height: 44px; }
+}
+
+@media (max-width: 640px) {
+    .logo img { height: 36px; }
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 4px; left: 50%;
+  transform: translateX(-50%);
+  width: 0; height: 1.5px;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover { color: var(--text); }
+.nav-links a:hover::after { width: 60%; }
+.nav-links a.active { color: var(--text); }
+.nav-links a.active::after { width: 60%; }
+
+.nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 4px; left: 50%;
+      transform: translateX(-50%);
+      width: 0; height: 1.5px;
+      background: var(--accent);
+      transition: width 0.25s ease;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover::after { width: 60%; }
+    .nav-links a.active { color: var(--text); }
+    .nav-links a.active::after { width: 60%; }
+
+/* TITOLO
+------------------------------------------------------*/
+.hero-titolo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 40px 20px;
+}
+
+.hero-testo {
+    display: flex;
+    flex-direction: row;       /* tutto su un'unica riga */
+    flex-wrap: wrap;           /* va a capo solo se non c'è proprio spazio */
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.4em;
+    text-align: center;
+}
+
+.hero-testo span {
+    font-family: 'Anton SC', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #92d4d4;            /* colore teal usato come colore font, non background */
+    font-size: clamp(1.4rem, 6vw, 3.5rem); /* si adatta ad ogni schermo */
+    line-height: 0.8;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+
+
+/* FOOTER
+-------------------------------------------------------*/
+footer {
+  flex-shrink: 0;
+  width: 100%;
+  background-color: #0e0e0e;
+  color: #aaa;
+}
+
+.footer-main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 20px 20px;
+}
+
+.footer-brand a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer-brand p {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.78rem;
+  color: #555;
+}
+
+/* ANIMAZIONE DI COMPARSA
+------------------------------------------------------*/
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-titolo {
+    opacity: 0;
+    animation: fadeInUp 0.9s ease-out forwards;
+}
+
+.gallery-wrapper {
+    opacity: 0;
+    animation: fadeInUp 0.9s ease-out forwards;
+    animation-delay: 0.3s;   /* compare leggermente dopo il titolo */
+}
+
+/* rispetta chi preferisce meno animazioni */
+@media (prefers-reduced-motion: reduce) {
+    .hero-titolo,
+    .gallery-wrapper {
+        animation: none;
+        opacity: 1;
+    }
+}
+
+.page-container {
+    width: 100%;
+    padding: 0 40px;
+}
+
+.page-container-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+    .page-container {
+        padding: 0 20px;
+    }
+}

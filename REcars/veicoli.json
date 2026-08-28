@@ -1,0 +1,63 @@
+[
+   {
+    "targa": "AB123CD",
+    "marca": "VOLKSWAGEN",
+    "modello": "Polo 2006",
+    "proprietario":"Andrea Rallo",
+    "alimentazione": "Benzina",
+    "cavalli": 120,
+    "bollo": { "stato": "attivo", "attivo": "2026-11-30" },
+    "assicurazione": { "stato": "attiva", "scadenza": "2027-03-15" },
+    "tagliando": { "ultimo": "2026-02-10", "prossimo": "2027-02-10" },
+    "revisione": { "ultima": "2024-06-01", "prossima": "2026-06-01" }
+  },
+
+  {
+    "targa": "RC440AB",
+    "marca": "FIAT",
+    "modello": "500X 2ª serie",
+    "proprietario":"Mario Rossi",
+    "alimentazione": "Benzina",
+    "cavalli": 120,
+    "bollo": { "stato": "attivo", "scadenza": "2026-11-30" },
+    "assicurazione": { "stato": "attiva", "scadenza": "2027-03-15" },
+    "tagliando": { "ultimo": "2026-02-10", "prossimo": "2027-02-10" },
+    "revisione": { "ultima": "2024-06-01", "prossima": "2026-06-01" }
+  },
+  {
+    "targa": "GH302PL",
+    "marca": "VOLKSWAGEN",
+    "modello": "Golf 8",
+    "proprietario":"Giulio Cesare",
+    "alimentazione": "Diesel",
+    "cavalli": 150,
+    "bollo": { "stato": "scaduto", "scadenza": "2026-05-20" },
+    "assicurazione": { "stato": "attiva", "scadenza": "2027-01-10" },
+    "tagliando": { "ultimo": "2025-09-01", "prossimo": "2026-09-01" },
+    "revisione": { "ultima": "2023-04-15", "prossima": "2025-04-15" }
+  },
+  {
+    "targa": "FJ849XK",
+    "marca": "TOYOTA",
+    "modello": "Yaris Hybrid",
+    "proprietario":"Chiara Aiello",
+    "alimentazione": "Ibrida",
+    "cavalli": 116,
+    "bollo": { "stato": "attivo", "scadenza": "2027-02-01" },
+    "assicurazione": { "stato": "scaduta", "scadenza": "2026-06-30" },
+    "tagliando": { "ultimo": "2026-03-05", "prossimo": "2027-03-05" },
+    "revisione": { "ultima": "2025-01-20", "prossima": "2027-01-20" }
+  },
+  {
+    "targa": "EX117YA",
+    "marca": "AUDI",
+    "modello": "A4 4ª serie",
+    "proprietario":"Maria Rossi",
+    "alimentazione": "Diesel",
+    "cavalli": 190,
+    "bollo": { "stato": "attivo", "scadenza": "2026-12-12" },
+    "assicurazione": { "stato": "attiva", "scadenza": "2027-04-08" },
+    "tagliando": { "ultimo": "2026-01-18", "prossimo": "2027-01-18" },
+    "revisione": { "ultima": "2024-11-02", "prossima": "2026-11-02" }
+  }
+]

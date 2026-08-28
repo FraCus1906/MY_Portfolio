@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="">
+    <title>Portfolio fra - Click Gallery</title>
+
+    <!--    <meta charset="utf-8">  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- si impone la larghezza=larghezza dispositivo  -->
+    <meta name="description" content="Portfolio page description - Web Developer - Francesca Cusenza">
+
+    <meta name="keywords" content="html, , turorial">
+    <meta name="autor" content="Francesca Cusenza | web developer and graphic designer">
+
+    <link rel="stylesheet" href="click.css">    
+   
+
+    
+    <!-- font -->
+            <!-- prima il preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+        <!-- poi il font Lato con i pesi che vuoi -->
+         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+        
+              
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+</head>
+<!--------------------------------------------------------------------------------------------------------------------------------------------------->
+<body>      
+    <header> <!-- parte principale che va in cima: logo + navbar -->
+        
+        <!--NAV BARRA A SCORRIMENTO --><!--NAV BARRA A TENDINA -->
+       <nav id="navbar">
+            <div class="nav-inner">
+        <div class="logo-group">
+            <a href="../index.html" class="logo">
+                <img src="../IMG/logotipo.png" alt="logotipo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">HOME</a></li>
+            </ul>
+
+        </div>
+
+
+
+    </header>
+
+    <main><!-- contenuto principale che contiene le varie sezioni-->
+
+        <section class="home">
+            <br>
+
+            <div class="hero-titolo">
+                <div class="hero-testo">
+                    <span class="web" style="letter-spacing: 0.5px;">GALLERY</span>
+                    <span class="developer" style="letter-spacing: 0.5px;">PROGECT</span>
+                    <span class="web" style="letter-spacing: 0.5px;">GRAPHIC</span>
+                </div>
+            </div>    
+         <br>
+    
+                    
+        </section>
+
+        <section>
+            <div class="gallery-wrapper w-[70vmin] h-[70vmin] [container-type:inline-size]">
+            <!-- Photo credit: Manthey Racing -->
+            <div class="w-[70vmin] h-[70vmin] [container-type:inline-size]">
+            <div class="relative h-full w-full grid gap-4 transition-all duration-500 ease-in-out md:grid-cols-[30cqmin_30cqmin_30cqmin] has-[>div:nth-child(1):hover]:md:grid-cols-[60cqmin_15cqmin_15cqmin] has-[>div:nth-child(2):hover]:md:grid-cols-[15cqmin_60cqmin_15cqmin] has-[>div:nth-child(3):hover]:md:grid-cols-[15cqmin_15cqmin_60cqmin] group before:bg-white/15 before:absolute before:inset-0 before:blur-[80px] hover:before:bg-white/5 before:transition-all before:ease-in-out before:duration-500 before:delay-300 before:rounded-xl pl-4 pt-4">
+
+                <!-- Column 1 -->
+                <div class="grid gap-4 transition-all duration-500 ease-in-out grid-rows-[30cqmin_30cqmin_30cqmin] has-[article:nth-child(1):hover]:grid-rows-[60cqmin_15cqmin_15cqmin] has-[article:nth-child(2):hover]:grid-rows-[15cqmin_60cqmin_15cqmin] has-[article:nth-child(3):hover]:grid-rows-[15cqmin_15cqmin_60cqmin]">
+
+                <article class="relative overflow-hidden rounded-xl cursor-pointer h-full shadow-2xl">
+                    <a href="../tailwindcss/finestre-html/interiodesign.html">
+                    <img class="w-full h-full object-cover transition-all duration-500 ease-in-out blur-0 group-hover:blur-[0.5px] group-hover:hover:blur-0 brightness-100 group-hover:brightness-50 group-hover:hover:brightness-100 contrast-100 group-hover:contrast-[1.2] group-hover:hover:contrast-110 scale-100 group-hover:scale-100 group-hover:hover:scale-[1.2] group-hover:delay-300" 
+                    src="../tailwindcss/progetti/interiodesign/stanze-Senza-titolo-20230526-190615.jpg" alt="interior design">              
+                    </a>
+                </article>
+
+                <article class="relative overflow-hidden rounded-xl cursor-pointer h-full shadow-2xl">
+                    <a href="../tailwindcss/finestre-html/pattern.html">
+                    <img class="w-full h-full object-cover transition-all duration-500 ease-in-out blur-0 group-hover:blur-[0.5px] group-hover:hover:blur-0 brightness-100 group-hover:brightness-50 group-hover:hover:brightness-100 contrast-100 group-hover:contrast-[1.2] group-hover:hover:contrast-110 scale-100 group-hover:scale-100 group-hover:hover:scale-[1.2] group-hover:delay-300" 
+                    src="../tailwindcss/progetti/pattern/Geominimal-Pop-12.jpg" alt="pattern"> 
+                    </a>             
+                </article>
+
+                <article class="relative overflow-hidden rounded-xl cursor-pointer h-full shadow-2xl">
+                    <a href="../tailwindcss/finestre-html/monogramma.html">
+                    <img class="w-full h-full object-cover transition-all duration-500 ease-in-out blur-0 group-hover:blur-[0.5px] group-hover:hover:blur-0 brightness-100 group-hover:brightness-50 group-hover:hover:brightness-100 contrast-100 group-hover:contrast-[1.2] group-hover:hover:contrast-110 scale-100 group-hover:scale-100 group-hover:hover:scale-[1.2] group-hover:delay-300" 
+                    src="../tailwindcss/progetti/monogramma/FC-01.jpg" alt="monogramma">
+                    </a>
+                </article>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="grid gap-4 transition-all duration-500 ease-in-out grid-rows-[30cqmin_30cqmin_30cqmin] has-[article:nth-child(1):hover]:grid-rows-[60cqmin_15cqmin_15cqmin] has-[article:nth-child(2):hover]:grid-rows-[15cqmin_60cqmin_15cqmin] has-[article:nth-child(3):hover]:grid-rows-[15cqmin_15cqmin_60cqmin]">
+
+                <article class="relative overflow-hidden rounded-xl cursor-pointer h-full shadow-2xl">
+                     <a href="../tailwindcss/finestre-html/logotipo.html">
+                    <img class="w-full h-full object-cover transition-all duration-500 ease-in-out blur-0 group-hover:blur-[0.5px] group-hover:hover:blur-0 brightness-100 group-hover:brightness-50 group-hover:hover:brightness-100 contrast-100 group-hover:contrast-[1.2] group-hover:hover:contrast-110 scale-100 group-hover:scale-100 group-hover:hover:scale-[1.2] group-hover:delay-300" 
+                    src="../tailwindcss/progetti/logotipo/LOGO_FRAFLY-1.jpg" alt="logotipo">
+                    </a>
+                </article>
+
+                <article class="relative overflow-hidden">
+                    
+                    
+                </article>
+
+                <article class="relative overflow-hidden rounded-xl cursor-pointer h-full shadow-2xl">
+                    <a href="finestre-html/pizzeria.html">
+                    <img  class="w-full h-full object-cover transition-all duration-500 ease-in-out blur-0 group-hover:blur-[0.5px] group-hover:hover:blur-0 brightness-100 group-hover:brightness-50 group-hover:hover:brightness-100 contrast-100 group-hover:contrast-[1.2] group-hover:hover:contrast-110 scale-100 group-hover:scale-100 group-hover:hover:scale-[1.2] group-hover:delay-300" 
+                    src="../tailwindcss/progetti/pizzeria/01.jpg" alt="pizzeria">
+                    </a>
+                </article>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="grid gap-4 transition-all duration-500 ease-in-out grid-rows-[30cqmin_30cqmin_30cqmin] has-[article:nth-child(1):hover]:grid-rows-[60cqmin_15cqmin_15cqmin] has-[article:nth-child(2):hover]:grid-rows-[15cqmin_60cqmin_15cqmin] has-[article:nth-child(3):hover]:grid-rows-[15cqmin_15cqmin_60cqmin]">
+
+                <article class="relative overflow-hidden rounded-xl cursor-pointer h-full shadow-2xl">
+                    <a href="../tailwindcss/finestre-html/gorghitondi.html">
+                    <img class="w-full h-full object-cover transition-all duration-500 ease-in-out blur-0 group-hover:blur-[0.5px] group-hover:hover:blur-0 brightness-100 group-hover:brightness-50 group-hover:hover:brightness-100 contrast-100 group-hover:contrast-[1.2] group-hover:hover:contrast-110 scale-100 group-hover:scale-100 group-hover:hover:scale-[1.2] group-hover:delay-300"
+                     src="../tailwindcss/progetti/gorghi tondi/rendering-03.jpg" alt="etichette vino">
+                     </a>
+                </article>
+
+             <article class="relative overflow-hidden rounded-xl cursor-pointer h-full shadow-2xl">
+                    <a href="../tailwindcss/finestre-html/pasticceria.html">
+                        <img class="w-full h-full object-cover transition-all duration-500 ease-in-out blur-0 group-hover:blur-[0.5px] group-hover:hover:blur-0 brightness-100 group-hover:brightness-50 group-hover:hover:brightness-100 contrast-100 group-hover:contrast-[1.2] group-hover:hover:contrast-110 scale-100 group-hover:scale-100 group-hover:hover:scale-[1.2] group-hover:delay-300" 
+                         src="../tailwindcss/progetti/pasticceria/01.jpg" alt="immagine coordinata">
+                    </a>
+                </article>
+
+                <article class="relative overflow-hidden rounded-xl cursor-pointer h-full shadow-2xl">
+                    <a href="../tailwindcss/finestre-html/collage.html">
+                    <img class="w-full h-full object-cover transition-all duration-500 ease-in-out blur-0 group-hover:blur-[0.5px] group-hover:hover:blur-0 brightness-100 group-hover:brightness-50 group-hover:hover:brightness-100 contrast-100 group-hover:contrast-[1.2] group-hover:hover:contrast-110 scale-100 group-hover:scale-100 group-hover:hover:scale-[1.2] group-hover:delay-300"
+                      src="../tailwindcss/progetti/collage locandine/collage1.jpg" alt="collage">
+                    </a>
+                </article>
+
+                </div>
+            </div>
+            </div>
+            
+            </div>
+            <br>
+            <br>
+        </section>
+         
+    </main>
+
+    <footer> 
+        <div class="footer-main">
+
+        <div class="footer-brand">
+            <p align="center">Francesca Cusenza</p>
+            <p align="center">Web Developer | Graphic Designer</p>
+        </div>
+            <div class="footer-bottom">
+            <p>© 2026 Francesca Cusenza — All rights reserved  - sperimentazione con il tailwindcss</p>
+        </div>
+    </div>
+    </footer>
+
+
+
+    </body>
+</html>

@@ -1,5 +1,5 @@
  /* ── Variables ── */
-    :root {
+    /*:root {
       --blue-dark:  #1a2c4e;
       --blue-mid:   #1e5799;
       --blue-light: #2a7fc9;
@@ -9,6 +9,20 @@
       --gray-light: #f4f6f8;
       --gray-mid:   #e0e5ec;
       --text-dark:  #1a2c4e;
+      --text-gray:  #555f6e;
+      --radius:     10px;
+    }*/
+
+     :root {
+      --blue-dark:  #06111b;
+      --blue-mid:   #404242;
+      --blue-light: #5d5f5f;
+      --orange:     #f07c21;
+      --orange-dark:#d96910;
+      --white:      #ffffff;
+      --gray-light: #f4f6f8;
+      --gray-mid:   #e0e5ec;
+      --text-dark:  #8f9092;
       --text-gray:  #555f6e;
       --radius:     10px;
     }
@@ -147,10 +161,18 @@
        HERO
     ══════════════════════════ */
     .hero {
-      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 60%, var(--blue-light) 100%);
+      /*background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 60%, var(--blue-light) 100%);*/
+      background-image: url('img/100h/garage2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       padding: 70px 5% 60px;
-      display: flex; flex-direction: column; align-items: center;
-      text-align: center; position: relative; overflow: hidden;
+      display: flex; 
+      flex-direction: column; 
+      align-items: center;
+      text-align: center; 
+      position: relative; 
+      overflow: hidden;
     }
     .hero::before {
       content: '';
@@ -453,6 +475,10 @@
       border-top: 1px solid rgba(255,255,255,.1);
       color: rgba(255,255,255,.35); font-size: .72rem;
     }
+     .footer-text{
+      text-align: center; margin-top: 1rem; padding-top: 1rem;
+      color: rgba(255,255,255,.35); font-size: .72rem;
+    }
  
     /* ══════════════════════════
        RESPONSIVE (tablet)
@@ -474,3 +500,179 @@
       .photo-strip .photo-cell { height: 180px; }
       .footer-inner  { flex-direction: column; }
     }
+
+    @media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+  }
+}
+
+/*---------------------------------------------------------
+botton per home portfolio
+--------------------------------------------------------*/
+.floating-logo-btn {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 998; /* sotto la nav (1000), sopra il contenuto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--bg, #ffffff);
+  border: 1px solid var(--border, rgba(0,0,0,.08));
+  box-shadow: 0 4px 16px rgba(0,0,0,.28);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.floating-logo-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+.floating-logo-btn img {
+  height: 55px;
+  width: 55px;
+  object-fit: contain;
+  display: block;
+  border-radius: 50%;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .floating-logo-btn { width: 56px; height: 56px; }
+  .floating-logo-btn img { height: 44px; width: 44px; }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .floating-logo-btn { width: 46px; height: 46px; left: 14px; bottom: 14px; }
+  .floating-logo-btn img { height: 36px; width: 36px; }
+}
+
+/* ==========================================================
+   Fix bottoni generati dinamicamente (reset stile nativo <button>)
+   ========================================================== */
+.search-result .btn,
+#search-result button.btn {
+  border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+#search-result button.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(240, 124, 33, .35);
+}
+.btn-coming-soon {
+  background: var(--blue-mid) !important;
+  cursor: default;
+  opacity: .9;
+}
+.btn-coming-soon:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* ==========================================================
+   Card risultato ricerca targa
+   ========================================================== */
+#search-result {
+  max-width: 440px;
+  margin: 1.2rem auto 0;
+}
+
+.result-not-found {
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 99, 71, .4);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.3rem;
+  color: rgba(255, 255, 255, .85);
+  font-size: .85rem;
+  line-height: 1.6;
+  text-align: left;
+}
+.result-not-found p:first-child { font-weight: 700; margin-bottom: .3rem; }
+
+.result-found {
+  background: var(--blue-dark);
+  border: 1px solid rgba(240, 124, 33, .35);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.4rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+  text-align: left;
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .8rem;
+  padding-bottom: .9rem;
+  margin-bottom: .9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+.result-targa {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 900;
+  letter-spacing: .06em;
+  color: var(--orange);
+  background: rgba(240, 124, 33, .12);
+  border: 1px solid rgba(240, 124, 33, .4);
+  border-radius: 6px;
+  padding: .3rem .7rem;
+  font-size: .85rem;
+}
+.result-modello {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: .88rem;
+  color: rgba(255, 255, 255, .9);
+  text-align: right;
+}
+
+.result-prorpeitario {
+  font-size: .68rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .45);
+}
+
+.result-idproprietario {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: .88rem;
+  color: rgba(255, 255, 255, .9);
+  text-align: right;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .9rem 1.2rem;
+  margin-bottom: 1.3rem;
+}
+.result-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+.result-grid .label {
+  font-size: .68rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .45);
+}
+.result-grid strong {
+  font-size: .85rem;
+  color: rgba(255, 255, 255, .92);
+  font-weight: 600;
+}
+.result-grid strong.ok { color: #4caf7d; }
+.result-grid strong.ko { color: #e2584d; }
+
+.result-found .btn {
+  width: 100%;
+  text-align: center;
+  display: block;
+}

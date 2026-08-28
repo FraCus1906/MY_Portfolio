@@ -9,10 +9,10 @@
 </head>
 <body id="top">
  
-<!-- ══════════ NAVBAR ══════════ -->
+<!--  NAVBAR -->
 <nav>
   <div class="nav-inner">
-    <a class="nav-logo" href="#top">RE<span>|</span>CAR</a>
+    <a class="nav-logo" href="#top">RE<span>|</span>CARS</a>
     <div class="nav-links">
       <a href="#aboutme">About me</a>
       <a href="#servizi">Servizi</a>
@@ -31,6 +31,10 @@
 
   </div>
 </nav>
+
+<a href="../index.html" class="floating-logo-btn" aria-label="Torna alla home">
+  <img src="../IMG/logotipo.png" alt="logotipo">
+</a>
 
 <!-- Mobile Menu rimane FUORI dalla nav, va bene così -->
 <div class="mobile-menu" id="mobileMenu">
@@ -53,7 +57,7 @@
   <p class="hero-sub"> tu guida, al resto pensiamo noi </p>
 </header>
  
-<!-- ══════════  ══════════ -->
+<!------------------------------------------------------------>
 <section class="youdrive" id="aboutme">
   <div class="youdrive-inner">
     <!-- Immagine app/telefono con auto -->
@@ -61,7 +65,7 @@
       <img src="img/SVG/punti chiave.svg" alt="YOUdrive App" >
     </div>
     <div class="youdrive-text">
-      <h2><em>RE</em>|<em>car</em></h2>
+      <h2><em>RE</em>|<em>CARS</em></h2>
       <p>
         Questa è la tua app per tenere tutto sotto controllo in un solo posto. Aggiungi
         i tuoi veicoli, controlla le scadenze, prenota il meccanico e molto altro ancora.
@@ -75,13 +79,15 @@
   </div>
 </section>
  
-<!-- ══════════ esempio di inserici targa ══════════ -->
+<!--inserimento targa esempio -->
 <section class="search-section" id="cerca">
   <h3>Inserisci targa del veicolo</h3>
-  <div class="search-box">
+    <div class="search-box">
     <input type="text" placeholder="Es. AB 123 CD" maxlength="8" />
     <button>Cerca</button>
   </div>
+  <div id="search-result"></div>
+
   <div class="store-badges">
     <div class="store-badge">
       <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -94,7 +100,7 @@
   </div>
 </section>
  
-<!-- ══════════ PUNTI DI FORZA ══════════ -->
+<!-------- PUNTI DI FORZA ------------------->
 <section class="features" id="servizi">
   <div class="container">
     <p class="section-title">Punti di Forza</p>
@@ -186,21 +192,21 @@
   </div>
 </section>
  
-<!-- ══════════ PHOTO STRIP ══════════ -->
+<!-- GALLERIA MOCKUP APPLICAZIONE -->
 <!-- Inserisci 3 immagini ambientali: laptop, tablet, smartphone -->
 <div class="photo-strip">
   <div class="photo-cell">
-    <img src="images/foto1.jpg" alt="Laptop" onerror="this.innerHTML='Immagine 1 (laptop)';" />
+    <img src="img/100h/mockup2.jpg" alt="Laptop" onerror="this.innerHTML='Immagine 1 (laptop)';" />
   </div>
   <div class="photo-cell">
-    <img src="images/foto2.jpg" alt="Tablet" onerror="this.innerHTML='Immagine 2 (tablet)';" />
+    <img src="img/100h/mockup3.jpg" alt="Tablet" onerror="this.innerHTML='Immagine 2 (tablet)';" />
   </div>
   <div class="photo-cell">
-    <img src="images/foto3.jpg" alt="Smartphone" onerror="this.innerHTML='Immagine 3 (smartphone)';" />
+    <img src="img/100h/mockup1.jpg" alt="Smartphone" onerror="this.innerHTML='Immagine 3 (smartphone)';" />
   </div>
 </div>
  
-<!-- ══════════ COME FUNZIONA ══════════ -->
+<!--------FUNZIONAMENTO -------->
 <section class="how">
   <div class="container">
     <p class="section-title">Come Funziona?</p>
@@ -211,7 +217,7 @@
         <div class="how-step-card">
           <div class="step-phone-placeholder">
             <img src="images/step1.png" alt="Cerca targa" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-            <span>Screenshot app</span>
+            <!--   <span>Screenshot app</span> -->
           </div>
           <div class="step-number">1</div>
           <h4>Cerca Targa</h4>
@@ -227,7 +233,7 @@
         <div class="how-step-card">
           <div class="step-phone-placeholder">
             <img src="images/step2.png" alt="Gestisci veicolo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-            <span>Screenshot app</span>
+            <!--   <span>Screenshot app</span> -->
           </div>
           <div class="step-number">2</div>
           <h4>Gestisci Veicolo</h4>
@@ -243,7 +249,7 @@
         <div class="how-step-card">
           <div class="step-phone-placeholder">
             <img src="images/step3.png" alt="Prenota meccanico" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-            <span>Screenshot app</span>
+            <!--   <span>Screenshot app</span> -->
           </div>
           <div class="step-number">6</div>
           <h4>Prenota Meccanico</h4>
@@ -264,7 +270,7 @@
   </div>
 </section>
  
-<!-- ══════════ RECENSIONI ══════════ -->
+<!-------sezione recensioni---------->
 <section class="reviews" id="recensioni">
   <p class="section-title">Recensioni di chi usa l'App</p>
   <div class="reviews-grid">
@@ -296,7 +302,7 @@
   </div>
 </section>
  
-<!-- ══════════ CONTATTI + TEAM ══════════ -->
+<!------------contatti e info membri sviluppattori ---------------------->
 <section class="contact-team" id="contatti">
   <div class="contact-info">
     <h3>Contatti</h3>
@@ -328,7 +334,7 @@
 </div>
 </section>
  
-<!-- ══════════ CTA ══════════ -->
+<!------cta per dove trovare prossimamento le applicazioni----------->
 <section class="cta-section">
   <h2>Che Aspetti?</h2>
   <div class="cta-btns">
@@ -337,7 +343,7 @@
   </div>
 </section>
  
-<!-- ══════════ FOOTER ══════════ -->
+<!-----------footer---------------->
 <footer>
   <div class="footer-inner">
     <div class="footer-col">
@@ -361,8 +367,10 @@
       <a href="#">Servizi</a>
     </div>
   </div>
+    <div class="footer-text">attenzione sito sviluppato come eserzitazione | alcune immagini di base provengono da magnific (freepik)</div>
   <div class="footer-bottom">© 2025 RE|CAR – tutti i diritti riservati</div>
 </footer>
+
  <script>
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -379,5 +387,6 @@
     });
   });
 </script>
+<script src="search.js"></script>
 </body>
 </html>
